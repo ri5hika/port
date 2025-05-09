@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#111827] text-white font-[Satoshi]">
+
+  <!-- Navbar -->
+  <div class="w-[92%] mx-auto mt-6">
+    <div class="flex justify-between items-center relative">
+      
+      <!-- Logo -->
+      <div class="w-[40px] h-[40px]">
+        <a href="home.html">
+          <img src="logo.jpg" alt="Logo" class="w-full h-full object-contain" />
+        </a>
+      </div>
+
+      <!-- Navbar -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 text-base font-semibold tracking-wide text-white">
+        <ul class="inline-flex gap-10">
+          <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="home.html">Home</a></li>
+          <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="about.html">About</a></li>
+          <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="projects.html">Projects</a></li>
+          <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="other.html">Other</a></li>
+        </ul>
+      </div>
+
+      <!-- Top Buttons -->
+      <div class="flex gap-3">
+        <a href="https://github.com/ri5hika" target="_blank">
+          <button class="w-[40px] h-[40px] flex items-center justify-center border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.28 3.438 9.75 8.205 11.325.6.113.82-.26.82-.577v-2.234c-3.338.725-4.033-1.415-4.033-1.415-.546-1.385-1.333-1.753-1.333-1.753-1.09-.746.084-.73.084-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.495.997.107-.775.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.465-2.38 1.235-3.22-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.245 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.921.43.37.81 1.096.81 2.21v3.28c0 .32.215.694.825.576C20.565 22.25 24 17.78 24 12.5 24 5.87 18.63.5 12 .5z"/>
+            </svg>
+          </button>
+        </a>
+        <a href="https://www.linkedin.com/in/singh-rishika/" target="_blank">
+          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+            Let's Connect
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Line -->
+  <hr class="mt-6 w-[92%] mx-auto border-white opacity-60" />
+
+  <br><br><br><br>
+
+  <!-- Text -->
+  <div class="w-[92%] mx-auto mt-16 mb-20">
+    <h1 class="text-5xl md:text-7xl font-bold mb-10">My Recent Works</h1>
+  </div>
+
+  <div class="w-[92%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Box 1 -->
+    <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
+      <div class="relative">
+        <img id="carousel1-img" src="myop1.jpg" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
+        <button onclick="prevImage(1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
+        <button onclick="nextImage(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+      </div>
+  
+      <h2 class="mt-8 text-2xl font-bold">MYOPTIC AI:</h2>
+      <h2 class="mt-2 text-xl font-bold">Artificial Intelligence Driven Multi-Model Framework for Vision Care</h2>
+      <p class="mt-6 text-white/100 leading-relaxed">This project integrates deep learning, machine learning, and natural language 
+        processing to provide a comprehensive AI driven Vision Care system. The CNN based analysis enables accurate detection of 
+        retinal abnormalities through image processing, while the RFC prediction model offers data driven insights based on numerical 
+        parameters. Additionally, the LLM chatbot enhances user engagement by providing interactive consultations and personalized recommendations. By combining these three approaches, this tool aims to assist individuals in monitoring their eye health efficiently, promoting early detection, and encouraging preventive care.
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://github.com/ri5hika/MYOPTIC-AI" target="_blank">
+          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+          View Code
+          </button>
+        </a>
+        <a href="https://youtu.be/c3pDnJ2B004" target="_blank">
+          <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+            View Demo
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
+      <div class="relative">
+        <img id="carousel2-img" src="z.png" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
+        <button onclick="prevImage(2)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
+        <button onclick="nextImage(2)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+      </div>
+  
+      <h2 class="mt-8 text-2xl font-bold">ZENDRIVE:</h2>
+      <h2 class="mt-2 text-xl font-bold">IoT Integrated Cognitive Fatigue Deetection Using Biosignals & Computer Vision</h2>
+      <p class="mt-6 text-white/100 leading-relaxed">This project detects driver drowsiness using EMG (Electromyography) signals captured 
+        through the BioAmp EXG Pill sensor connected to an Arduino. Real-time data is visualized using Python, and alerts are generated 
+        (beep sounds) when muscle activity drops below a defined threshold combined with eye and face data from Raspberry camera module 
+        — indicating possible fatigue or drowsiness, this is done using Open CV. Everything is managed via an app that also predicts real-time 
+        location where the driver should rest to prevent fatigue.
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://github.com/ri5hika/ZenDrive" target="_blank">
+          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+          View Code
+          </button>
+        </a>
+        <a href="https://youtu.be/pSQxcGMXQZQ" target="_blank">
+          <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+            View Demo
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div class="w-[92%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Box 3 -->
+    <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
+      <div class="relative">
+        <img id="carousel3-img" src="tar1.jpg" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
+        <button onclick="prevImage(3)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
+        <button onclick="nextImage(3)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+      </div>
+  
+      <h2 class="mt-8 text-2xl font-bold">TARANG AI:</h2>
+      <h2 class="mt-2 text-xl font-bold">Artificial Intelligence Driven Water Safety Prediction Tool</h2>
+      <p class="mt-6 text-white/100 leading-relaxed">Tarang AI is proudly rooted in India and is backed by real data of 1700+ places.
+        This project predicts water safety based on environmental parameters using a Random Forest Classifier model. It preprocesses 
+        water quality data, trains a Random Forest Classifier model, calibrates it, and provides predictions i.e. probability of the 
+        water being safe or probability or it being unsafe. It uses advanced AI/ML algorithm to predict water safety across based on 
+        real-time inputs from the user. It also offers other features like water safety tips, flagging personal concerns etc.
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://github.com/ri5hika/TarangAI" target="_blank">
+          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+          View Code
+          </button>
+        </a>
+        <a href="https://youtu.be/3jr1kNj8Qxg" target="_blank">
+          <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+            View Demo
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
+      <div class="relative">
+        <img id="carousel4-img" src="yuri1.jpg" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
+        <button onclick="prevImage(4)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
+        <button onclick="nextImage(4)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+      </div>
+  
+      <h2 class="mt-8 text-2xl font-bold">YURI CLOUD:</h2>
+      <h2 class="mt-2 text-xl font-bold">AI-Powered Anomaly Detection in Cloud Infrastructure</h2>
+      <p class="mt-6 text-white/100 leading-relaxed">Yuri Cloud uses machine learning techniques like isolation forest to flag 
+        potential threats in your cloud infrastructure. This project was designed to enhance cloud security through real-time monitoring 
+        and AI-driven anomaly detection, it helps in alerting the user of potential threats and performance issues. YuriCloud features 
+        user-friendly interface with a dashboard that displays basic information about the cloud server, an explore page that provides 
+        cybersecurity news and other related articles to keep the users informed and alert. The main feature it offers is to perform 
+        real-time check and get a full graphical report on potential anomalies.
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://github.com/ri5hika/yuriCloud" target="_blank">
+          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+          View Code
+          </button>
+        </a>
+        <a href="https://youtu.be/8PrJ6HbStQc" target="_blank">
+          <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+            View Demo
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <script src="script.js"></script>
+</body>
+</html>

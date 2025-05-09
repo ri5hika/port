@@ -1,0 +1,28 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+body {
+    background-image: url('aw.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size: 2em;
+}
+
+
+body {
+    font-family: 'Satoshi', sans-serif;
+}
+  
+body {
+  overflow-y: auto;
+}
