@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="relative mt-6 w-[92%] mx-auto font-[Satoshi]">
+
+<body class="bg-[#111827] text-white font-[Satoshi] md:overflow-hidden overflow-auto">
+  <div class="relative mt-6 w-[92%] mx-auto">
     <div class="flex justify-between items-center">
-      <!-- Logo   -->
+
+      <!-- Logo -->
       <div class="w-[40px] h-[40px]">
         <a href="home.html">
           <img src="logo.jpg" alt="Logo" class="w-full h-full object-contain">
-        </a>  
+        </a>
       </div>
 
-      <!-- Navbar -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 text-base font-semibold tracking-wide text-white">
+      <!-- Hamburger Icon (Mobile only) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar (Desktop) -->
+      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 text-base font-semibold tracking-wide">
         <ul class="inline-flex gap-10">
           <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="home.html">Home</a></li>
           <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="about.html">About</a></li>
           <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="projects.html">Projects</a></li>
           <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="other.html">Other</a></li>
         </ul>
-      </div>      
+      </div>
 
-      <!-- Top buttons -->
-      <div class="flex gap-3">
+      <!-- Top buttons {Desktop) -->
+      <div class="hidden md:flex gap-3 text-white">
         <a href="https://github.com/ri5hika" target="_blank">
           <button class="w-[40px] h-[40px] flex items-center justify-center border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
@@ -42,46 +54,95 @@
           <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
             Let's Connect
           </button>
-        </a>  
-      </div>
-    </div>
-  </div>
-
-  <div class="w-[92%] mx-auto font-[Satoshi]">
-    <div class="absolute top-1/2 -translate-y-1/2 text-white">
-
-      <br><br>
-
-      <!-- Big text -->
-      <h1 class="text-7xl font-bold">Hey there, <br> I'm Rishika Singh!</h1>
-      <p class="mt-6 text-xl font-light tracking-wide">As a third year Computer Sciene Engineering student, I'm deeply passionate about <br>Software Development, Generative AI, Machine Learning and Deep Learning.</p>
-
-      <br><br><br>
-      
-      <!-- Bottom buttons -->
-      <div class="mt-8 flex gap-4">
-        <a href="about.html">
-          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
-            Know More
-          </button>
-        </a>
-        
-        <a href="other.html">
-          <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
-            My Resume
-          </button>
         </a>
       </div>
     </div>
+
+    <!-- Mobile Menu (Dropdown) -->
+    <div id="mobile-menu" class="md:hidden hidden mt-4 text-white text-base font-semibold bg-[#111827] p-4 rounded-xl shadow-lg">
+      <ul class="flex flex-col gap-4">
+        <li><a href="home.html" class="block">Home</a></li>
+        <li><a href="about.html" class="block">About</a></li>
+        <li><a href="projects.html" class="block">Projects</a></li>
+        <li><a href="other.html" class="block">Other</a></li>
+        <li><a href="https://github.com/ri5hika" target="_blank" class="block">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/singh-rishika/" target="_blank" class="block">Let's Connect</a></li>
+      </ul>
+    </div>
   </div>
 
-  <!-- Laptop image -->
-  <div class="absolute top-[55%] right-[5%] transform -translate-y-1/2">
+  <!-- Line -->
+  <hr class="mt-6 w-[92%] mx-auto border-white opacity-60" />
+
+  <!-- Main text -->
+  <div class="w-[92%] mx-auto relative md:h-screen">
+    <div class="pt-12 md:absolute md:top-[42%] md:-translate-y-1/2">
+        <h1 class="text-4xl md:text-7xl font-bold">Hey there, <br> I'm Rishika Singh!</h1>
+        <p class="mt-6 text-lg md:text-xl font-light tracking-wide">
+            As a third year Computer Science Engineering student, I'm deeply passionate about <br class="hidden md:block">
+            Software Development, Generative AI, Machine Learning and Deep Learning.
+        </p>
+
+        <br class="hidden md:block">
+        <br class="hidden md:block">
+        <br class="hidden md:block">
+
+        <!-- Laptop Image (on mobile) -->
+        <div class="my-8 block md:hidden">
+            <img src="laptop6.png" alt="Laptop image" class="w-[300px] h-auto object-cover">
+        </div>
+
+        <!-- Buttons below -->
+        <div class="mt-8 mb-12 flex gap-4">
+            <a href="about.html">
+                <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+                    Know More
+                </button>
+            </a>
+            <a href="other.html">
+                <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+                    My Resume
+                </button>
+            </a>
+        </div>
+
+        <br class="md:hidden">
+        <br class="md:hidden">
+        <br class="md:hidden">
+
+    </div>
+  </div>
+
+  <!-- Desktop Image (on desktop) -->
+  <div class="hidden md:block md:absolute md:top-[55%] md:right-[5%] md:-translate-y-1/2">
     <img src="laptop6.png" alt="Image" class="w-[450px] h-auto object-cover">
   </div>
+  
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-  <hr class="mt-6 w-[92%] mx-auto border-white" style="border-top: 0.3px solid #ffffffb9;">
+    // Toggle menu on burger icon click
+    menuToggle.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevents click from reaching document
+      mobileMenu.classList.toggle("hidden");
+    });
 
-  <script src="script.js"></script>
+    // Close menu on clicking outside
+    document.addEventListener("click", function (event) {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+
+    // Prevent clicks inside the menu from closing it
+    mobileMenu.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  </script>
+
 </body>
 </html>
