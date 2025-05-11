@@ -26,3 +26,11 @@ body {
 body {
   overflow-y: auto;
 }
+
+#mobile-menu {
+  position: absolute; /* Position it above other content */
+  top: 50px; /* Adjust this value if you want it to appear lower or higher */
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Ensure it's above other content */
+}
