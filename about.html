@@ -178,5 +178,31 @@
     </div>
 
   <script src="script.js"></script>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    // Toggle menu on burger icon click
+    menuToggle.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevents click from reaching document
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close menu on clicking outside
+    document.addEventListener("click", function (event) {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+
+    // Prevent clicks inside the menu from closing it
+    mobileMenu.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  </script>     
 </body>
 </html>
