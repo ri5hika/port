@@ -10,20 +10,28 @@
 </head>
 
 <body class="bg-[#111827] text-white font-[Satoshi]">
+  <div class="relative mt-6 w-[92%] mx-auto">
+    <div class="flex justify-between items-center">
 
-  <!-- Navbar -->
-  <div class="w-[92%] mx-auto mt-6">
-    <div class="flex justify-between items-center relative">
-      
       <!-- Logo -->
       <div class="w-[40px] h-[40px]">
         <a href="home.html">
-          <img src="logo.jpg" alt="Logo" class="w-full h-full object-contain" />
+          <img src="logo.jpg" alt="Logo" class="w-full h-full object-contain">
         </a>
       </div>
 
-      <!-- Navbar -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 text-base font-semibold tracking-wide text-white">
+      <!-- Hamburger Icon (Mobile only) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar (Desktop) -->
+      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 text-base font-semibold tracking-wide">
         <ul class="inline-flex gap-10">
           <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="home.html">Home</a></li>
           <li class="cursor-pointer px-4 py-2 rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform"><a href="about.html">About</a></li>
@@ -32,8 +40,8 @@
         </ul>
       </div>
 
-      <!-- Top Buttons -->
-      <div class="flex gap-3">
+      <!-- Top buttons {Desktop) -->
+      <div class="hidden md:flex gap-3 text-white">
         <a href="https://github.com/ri5hika" target="_blank">
           <button class="w-[40px] h-[40px] flex items-center justify-center border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
@@ -41,6 +49,7 @@
             </svg>
           </button>
         </a>
+
         <a href="https://www.linkedin.com/in/singh-rishika/" target="_blank">
           <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
             Let's Connect
@@ -48,12 +57,27 @@
         </a>
       </div>
     </div>
+
+    <!-- Mobile Menu (Dropdown) -->
+    <div id="mobile-menu" class="md:hidden hidden mt-4 text-white text-base font-semibold bg-[#111827] p-4 rounded-xl shadow-lg">
+      <ul class="flex flex-col gap-4">
+        <li><a href="home.html" class="block">Home</a></li>
+        <li><a href="about.html" class="block">About</a></li>
+        <li><a href="projects.html" class="block">Projects</a></li>
+        <li><a href="other.html" class="block">Other</a></li>
+        <li><a href="https://github.com/ri5hika" target="_blank" class="block">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/singh-rishika/" target="_blank" class="block">Let's Connect</a></li>
+      </ul>
+    </div>
   </div>
 
   <!-- Line -->
   <hr class="mt-6 w-[92%] mx-auto border-white opacity-60" />
 
-  <br><br><br><br>
+  <br class="hidden md:block">
+  <br class="hidden md:block">
+  <br class="hidden md:block">
+  <br class="hidden md:block">
 
   <!-- Text -->
   <div class="w-[92%] mx-auto mt-16 mb-20">
@@ -64,9 +88,9 @@
     <!-- Box 1 -->
     <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
       <div class="relative">
-        <img id="carousel1-img" src="myop1.jpg" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
-        <button onclick="prevImage(1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
-        <button onclick="nextImage(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+        <img id="carousel1-img" src="myop1.jpg" alt="Project Image" class="rounded-3xl w-full h-auto md:h-64 object-cover" />
+        <button onclick="prevImage(1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">←</button>
+        <button onclick="nextImage(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">→</button>
       </div>
   
       <h2 class="mt-8 text-2xl font-bold">MYOPTIC AI:</h2>
@@ -93,9 +117,9 @@
     <!-- Box 2 -->
     <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
       <div class="relative">
-        <img id="carousel2-img" src="z.png" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
-        <button onclick="prevImage(2)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
-        <button onclick="nextImage(2)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+        <img id="carousel2-img" src="z.png" alt="Project Image" class="rounded-3xl w-full h-auto md:h-64 object-cover" /> 
+        <button onclick="prevImage(2)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">←</button>
+        <button onclick="nextImage(2)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">→</button>
       </div>
   
       <h2 class="mt-8 text-2xl font-bold">ZENDRIVE:</h2>
@@ -119,7 +143,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> 
 
   <br><br><br>
 
@@ -127,9 +151,9 @@
     <!-- Box 3 -->
     <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
       <div class="relative">
-        <img id="carousel3-img" src="tar1.jpg" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
-        <button onclick="prevImage(3)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
-        <button onclick="nextImage(3)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+        <img id="carousel3-img" src="tar1.jpg" alt="Project Image" class="rounded-3xl w-full h-auto md:h-64 object-cover" /> 
+        <button onclick="prevImage(3)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">←</button>
+        <button onclick="nextImage(3)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">→</button>
       </div>
   
       <h2 class="mt-8 text-2xl font-bold">TARANG AI:</h2>
@@ -157,9 +181,9 @@
     <!-- Box 4 -->
     <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
       <div class="relative">
-        <img id="carousel4-img" src="yuri1.jpg" alt="Project Image" class="rounded-3xl w-full h-64 object-cover" />
-        <button onclick="prevImage(4)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8592;</button>
-        <button onclick="nextImage(4)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">&#8594;</button>
+        <img id="carousel4-img" src="yuri1.jpg" alt="Project Image" class="rounded-3xl w-full h-auto md:h-64 object-cover" />
+        <button onclick="prevImage(4)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">←</button>
+        <button onclick="nextImage(4)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">→</button>
       </div>
   
       <h2 class="mt-8 text-2xl font-bold">YURI CLOUD:</h2>
@@ -187,6 +211,32 @@
   </div>
 
   <br><br><br>
+
+    <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    // Toggle menu on burger icon click
+    menuToggle.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevents click from reaching document
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close menu on clicking outside
+    document.addEventListener("click", function (event) {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+
+    // Prevent clicks inside the menu from closing it
+    mobileMenu.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
