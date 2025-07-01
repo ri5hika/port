@@ -212,6 +212,41 @@
 
   <br><br><br>
 
+  <div class="w-[92%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Box 5 -->
+    <div class="bg-transparent hover:bg-black/60 border border-white/100 rounded-3xl p-6 transition duration-300">
+      <div class="relative">
+        <img id="carousel3-img" src="voi1.jpg" alt="Project Image" class="rounded-3xl w-full h-auto md:h-64 object-cover" /> 
+        <button onclick="prevImage(3)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">←</button>
+        <button onclick="nextImage(3)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-[#111827] rounded-full w-8 h-8 flex items-center justify-center">→</button>
+      </div>
+  
+      <h2 class="mt-8 text-2xl font-bold">AI VOICE AGENT:</h2>
+      <h2 class="mt-2 text-xl font-bold">Low-Latency Real-Time AI Voice Agent</h2>
+      <p class="mt-6 text-white/100 leading-relaxed">This project implements a real-time voice-based AI assistant using LiveKit's Agent framework. 
+        It integrates automatic speech recognition (ASR), natural language processing (LLM), speech-to-text (STT) and text-to-speech (TTS) using APIs 
+        from Deepgram, GROQ, and Cartesia, along with multilingual voice activity detection and noise cancellation. The agent works locally on your 
+        console and delivers impressively low latency across all stages of interaction in real time, from detecting when the user finishes speaking to 
+        delivering a fully spoken response. During each call session, detailed performance metrics such as End of Utterance Delay (EOU), Time to 
+        First Token (TTFT), Time to First Byte (TTFB), total latency, etc.
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://github.com/ri5hika/AI-VoiceAgent" target="_blank">
+          <button class="px-5 py-2 bg-white text-[#111827] text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:-translate-y-[2px] transition transform">
+          View Code
+          </button>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1IUN5ksWcgtq1qUhVH2MT9sqCmm_vmb1r?usp=drive_link" target="_blank">
+          <button class="px-5 py-2 border border-white text-white text-base font-semibold tracking-wider rounded-xl hover:bg-white hover:text-[#111827] hover:-translate-y-[2px] transition transform">
+            View Demo
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>  
+
     <script>
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
